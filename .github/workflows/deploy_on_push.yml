@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Deploy
+      uses: rtCamp/action-deploy-wordpress@master
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        NODE_VERSION: 22
+        NODE_BUILD_DIRECTORY: demo/integration
+        NODE_BUILD_COMMAND: npm install
