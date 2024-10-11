@@ -61,6 +61,7 @@ function generateBid(
   return {
     ad: ad.metadata,
     bid: bidCPM,
+	bidCurrency:'USD',
     render: ad.renderUrl,
     allowComponentAuction: true,
   };
