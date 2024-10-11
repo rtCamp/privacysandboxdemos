@@ -1,19 +1,19 @@
 const auctionConfig = {
     seller: seller,
-  
+
     decisionLogicUrl: `${seller}/ssp/decision-logic.js`,
-    trustedScoringSignalsUrl: `${seller}/ssp/kv.json`, 
-  
+    trustedScoringSignalsUrl: `${seller}/ssp/kv.json`,
+
     interestGroupBuyers: [
       // * is not supported yet
       buyer,
     ],
     // public for everyone
     auctionSignals: { auction_signals: 'auction_signals' },
-  
+
     // only for single party
-    sellerSignals: { floor: 7, auctionID: 'id_' + Math.round(Math.random() * 1000000 ) },
-  
+    sellerSignals: { floor: 7, auctionID: 'id_' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
+
     // only for single party
     perBuyerSignals: {
       // listed on interestGroupByers
@@ -22,11 +22,11 @@ const auctionConfig = {
       },
     },
   };
-  
-  
-  
+
+
+
   var adAuctionID = 'fledge-iframe';
-  
+
   //var b = document.createElement('button');
   var b = document.getElementById("run");
   var target = document.getElementById("adSlot")
@@ -35,11 +35,11 @@ const auctionConfig = {
     console.log("Runnning auction");
     var old = document.getElementById(adAuctionID);
     old?.remove() ;
-  
+
     var adSlotDesc = document.createElement("div");
     adSlotDesc.textContent="Running Auction";
     target.appendChild(adSlotDesc);
-    
+
     target.appendChild()
     const adAuctionResult = await navigator.runAdAuction(auctionConfig);
     if( adAuctionResult ) {
@@ -56,4 +56,4 @@ const auctionConfig = {
         target.appendChild($iframe);
    }
   };
-  
+

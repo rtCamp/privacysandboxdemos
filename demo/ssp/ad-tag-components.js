@@ -2,7 +2,7 @@ const auctionConfig = {
   seller: topLevelSeller,
 
   decisionLogicUrl: `${topLevelSeller}/ssp/decision-logic-tls.js`,
-  trustedScoringSignalsUrl: `${topLevelSeller}/ssp/kv.json`, 
+  trustedScoringSignalsUrl: `${topLevelSeller}/ssp/kv.json`,
 
   auctionSignals: { auction_signals: 'top_auction_signals' },
   sellerSignals: { seller_signals: 'top_seller_signals' },
@@ -14,10 +14,10 @@ const auctionConfig = {
 		  seller: componentSeller1,
 
 		  decisionLogicUrl: `${componentSeller1}/ssp/decision-logic-ca.js`,
-		  trustedScoringSignalsUrl: `${componentSeller1}/ssp/kv.json`, 
+		  trustedScoringSignalsUrl: `${componentSeller1}/ssp/kv.json`,
 
 		  auctionSignals: { auction_signals: 'ca_auction_signals-1' },
-		  sellerSignals: { floor: 17, auctionID: 'ca_seller_signals_1-' + Math.round(Math.random() * 1000000 ) },
+		  sellerSignals: { floor: 17, auctionID: 'ca_seller_signals_1-' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
 		  interestGroupBuyers: [
 		    buyer1,
 		  ],
@@ -29,10 +29,10 @@ const auctionConfig = {
 		  seller: componentSeller2,
 
 		  decisionLogicUrl: `${componentSeller2}/ssp/decision-logic-2-ca.js`,
-		  trustedScoringSignalsUrl: `${componentSeller2}/ssp/kv.json`, 
+		  trustedScoringSignalsUrl: `${componentSeller2}/ssp/kv.json`,
 
 		  auctionSignals: { auction_signals: 'ca_auction_signals_2' },
-		  sellerSignals: { floor: 71, auctionID: 'ca_seller_signals_2-' + Math.round(Math.random() * 1000000 ) },
+		  sellerSignals: { floor: 71, auctionID: 'ca_seller_signals_2-' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
 		  interestGroupBuyers: [
 		    buyer1,
 		    buyer2,

@@ -2,14 +2,14 @@ const auctionConfig = {
   seller: seller,
 
   decisionLogicUrl: `${seller}/ssp/decision-logic.js`,
-  trustedScoringSignalsUrl: `${seller}/ssp/kv.json`, 
+  trustedScoringSignalsUrl: `${seller}/ssp/kv.json`,
 
   interestGroupBuyers: [
     buyer,
   ],
   auctionSignals: { auction_signals: 'auction_signals' },
 
-  sellerSignals: { floor: 7, auctionID: 'id_' + Math.round(Math.random() * 1000000 ) },
+  sellerSignals: { floor: 7, auctionID: 'id_' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
 
   perBuyerSignals: {
     [`${buyer}`]: {
