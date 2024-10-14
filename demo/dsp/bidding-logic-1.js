@@ -52,7 +52,8 @@ function generateBid(
   return {
     ad: ad.metadata,
     bid: bidCPM,
-    render: ad.renderUrl,
+	bidCurrency:'USD',
+	render: ad.renderUrl,
     allowComponentAuction: true,
   };
 }
