@@ -17,7 +17,7 @@ const auctionConfig = {
       trustedScoringSignalsUrl: `${componentSeller1}/ssp/kv.json`,
 
       auctionSignals: { auction_signals: 'ca_auction_signals-1' },
-      sellerSignals: { floor: 17, auctionID: 'ca_seller_signals_1-' + Math.round(Math.random() * 1000000 ) },
+      sellerSignals: { floor: 17, auctionID: 'ca_seller_signals_1-' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
       interestGroupBuyers: [
         buyer1,
       ],
@@ -32,7 +32,7 @@ const auctionConfig = {
       trustedScoringSignalsUrl: `${componentSeller2}/ssp/kv.json`,
 
       auctionSignals: { auction_signals: 'ca_auction_signals_2' },
-      sellerSignals: { floor: 71, auctionID: 'ca_seller_signals_2-' + Math.round(Math.random() * 1000000 ) },
+      sellerSignals: { floor: 71, auctionID: 'ca_seller_signals_2-' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
       interestGroupBuyers: [
         buyer1,
         buyer2,
@@ -77,5 +77,5 @@ b.onclick = async () => {
   } else {
     const adContainer = document.getElementById("ad-container");
     adContainer.innerHTML = '<div class="demo-ad-slot-area" id="fledge-iframe">300x250 <br><br><p style="color:red">no auction winner</p></div>';
-  }    
+  }
 };
