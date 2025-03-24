@@ -5,7 +5,7 @@ const auctionConfig = {
   trustedScoringSignalsUrl: `${topLevelSeller}/ssp/kv.json`,
 
   auctionSignals: { auction_signals: 'top_auction_signals' },
-  sellerSignals: { seller_signals: 'top_seller_signals' },
+  sellerSignals: { floor: 71, auctionID: 'id_' + Math.round(Math.random() * 1000000), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
   perBuyerSignals: {
     [`${buyer1}`]: { per_buyer_signals: 'top_per_buyer_signals' },
   },
