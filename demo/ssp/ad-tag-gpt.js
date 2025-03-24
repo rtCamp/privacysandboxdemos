@@ -11,7 +11,7 @@ const auctionConfig = {
 
   auctionSignals: { auction_signals: 'auction_signals' },
 
-  sellerSignals: { seller_signals: 'seller_signals' },
+  sellerSignals: { floor: 34, auctionID: 'id_' + Math.round(Math.random() * 1000000), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
 
   perBuyerSignals: {
     [`${buyer}`]: {
