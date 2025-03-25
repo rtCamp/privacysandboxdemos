@@ -51,7 +51,8 @@ function scoreAd(
     ad: { 'bid-metadata': adMetadata, 'score-metadata': {} }, /* returned to TLS */
     desirability: score,
     rejectReason: "not-available", /* https://github.com/qingxinwu/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#reporting */
-	  bid: adjustedBid, 
+	  bid: adjustedBid,
+	  bidCurrency: 'USD',
     allowComponentAuction: true,
   }
 }
