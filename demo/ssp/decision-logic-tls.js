@@ -51,6 +51,7 @@ function scoreAd(
 
     return {
 	  desirability: score,
+	  bidCurrency: 'USD',
 	  rejectReason: "not-available", /* https://github.com/qingxinwu/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#reporting */
 	  allowComponentAuction: true,
   };
