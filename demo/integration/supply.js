@@ -12,7 +12,14 @@ const auctionConfig = {
   auctionSignals: { auction_signals: 'auction_signals' },
 
   // only for single party
-  sellerSignals: { floor: 7, auctionID: 'id_' + Math.round(Math.random() * 1000000), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
+  sellerSignals: {
+    floor: 7,
+    auctionID: 'id_' + Math.round(Math.random() * 1000000),
+    divId: 'ad-container',
+    adType: 'image',
+    size: [300, 250],
+    isFencedFrame: true
+  },
 
   // only for single party
   perBuyerSignals: {

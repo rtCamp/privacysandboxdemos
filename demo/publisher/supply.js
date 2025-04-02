@@ -5,7 +5,14 @@ const auctionConfig = {
   trustedScoringSignalsUrl: `${topLevelSeller}/ssp/kv.json`,
 
   auctionSignals: { auction_signals: 'top_auction_signals' },
-  sellerSignals: { floor: 7, auctionID: 'id_' + Math.round(Math.random() * 1000000), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
+  sellerSignals: {
+    floor: 7,
+    auctionID: 'id_' + Math.round(Math.random() * 1000000),
+    divId: 'ad-container',
+    adType: 'image',
+    size: [300, 250],
+    isFencedFrame: true
+  },
   perBuyerSignals: {
     [`${buyer1}`]: { per_buyer_signals: 'top_per_buyer_signals' },
   },
@@ -17,7 +24,14 @@ const auctionConfig = {
       trustedScoringSignalsUrl: `${componentSeller1}/ssp/kv.json`,
 
       auctionSignals: { auction_signals: 'ca_auction_signals-1' },
-      sellerSignals: { floor: 17, auctionID: 'ca_seller_signals_1-' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
+      sellerSignals: {
+        floor: 17,
+        auctionID: 'ca_seller_signals_1-' + Math.round(Math.random() * 1000000),
+        divId: 'ad-container',
+        adType: 'image',
+        size: [300, 250],
+        isFencedFrame: true
+      },
       interestGroupBuyers: [
         buyer1,
       ],
@@ -32,7 +46,14 @@ const auctionConfig = {
       trustedScoringSignalsUrl: `${componentSeller2}/ssp/kv.json`,
 
       auctionSignals: { auction_signals: 'ca_auction_signals_2' },
-      sellerSignals: { floor: 71, auctionID: 'ca_seller_signals_2-' + Math.round(Math.random() * 1000000 ), divId:'ad-container', type:'image',size: [300,250], isFencedFrame:true },
+      sellerSignals: {
+        floor: 71,
+        auctionID: 'ca_seller_signals_2-' + Math.round(Math.random() * 1000000),
+        divId: 'ad-container',
+        adType: 'image',
+        size: [300, 250],
+        isFencedFrame: true
+      },
       interestGroupBuyers: [
         buyer1,
         buyer2,
